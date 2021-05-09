@@ -1,0 +1,4 @@
+polybar|notice:  Parsing config file: /home/tato/.config/polybar/config
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=11" (name=JetBrainsMonoMedium Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMono Nerd Font Mono:pixelsize=11" (name=JetBrainsMono Nerd Font Mono, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font:pixelsize=11" (name=JetBrainsMonoExtraBold Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete.ttf)

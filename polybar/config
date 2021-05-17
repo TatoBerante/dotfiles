@@ -60,8 +60,9 @@ gb-bgz = #b0a69b
 spotify-green = #4fe383
 
 [bar/mybar]
-;monitor = ${env:MONITOR:HDMI-1}
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:HDMI-A-0}
+;monitor = ${env:MONITOR:VGA-0}
+
 width = 100%
 height = 19
 ;offset-x = 2%
@@ -254,11 +255,12 @@ interval = 1
 ;
 ;
 ;
-format-prefix = ""
+;format-prefix = ""
+format-prefix = " "
 format-prefix-font = 3
 format-prefix-foreground = ${colors.foreground}
 format-underline = #00f90000
-label = %percentage:3%%
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -266,11 +268,12 @@ interval = 1
 ;
 ;
 ;
-format-prefix = ""
+;format-prefix = ""
+format-prefix = " "
 format-prefix-font = 3
 format-prefix-foreground = ${colors.foreground}
 format-underline = #004bffdc
-label = %percentage_used:4%%
+label = %percentage_used:2%%
 
 ;
 
@@ -306,7 +309,7 @@ type = internal/network
 ; Get yor eth in terminal:
 ; $ ip link show
 ; The interface name will be something like enp2s0 or eth0
-interface = enp2s0
+interface = enp4s0
 interval = 1.0
 accumulate-stats = true
 ;  
@@ -339,11 +342,13 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.gb-bgx}
-format-prefix-background = ${colors.gb-bgx}
+;format-prefix-background = ${colors.gb-bgx}
+format-prefix-background = ${colors.gb-gray}
 format-underline = ${colors.gb-orange}
 
 label = "%date% · %time% "
 label-background = ${colors.gb-bgz}
+;label-background = ${colors.gb-gray}
 label-foreground = ${colors.black}
 
 [module/pulseaudio]

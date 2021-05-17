@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileZilla3 version="3.50.0" platform="*nix">
+	<Servers>
+		<Server>
+			<Host>200.110.219.83</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>1</Type>
+			<User>anonymous</User>
+			<Pass encoding="base64" />
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>hm2Data</Name>
+			<RemoteDir>1 0</RemoteDir>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>snowflakedev.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>nf85a45</User>
+			<Pass encoding="base64">TnVyZ2xlMjAyMA==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>snowflake</Name>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+	</Servers>
+</FileZilla3>

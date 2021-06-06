@@ -50,6 +50,38 @@ super + g
 super + c
     code
 
+# flameshot
+Print
+	flameshot gui
+
+#----------------------------------------------------
+# MEDIA
+#----------------------------------------------------
+
+# Toggle mute
+XF86AudioMute
+    pulseaudio-ctl mute
+
+# Toggle mic mute
+XF86AudioMicMute
+    pulseaudio-ctl mute-input
+
+# Change volume
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+
+XF86AudioLowerVolume
+    amixer set Master 5%-
+
+XF86AudioPlay 
+    playerctl play-pause
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl previous 
+
 #----------------------------------------------------
 # BSPWM HOTKEYS
 #----------------------------------------------------

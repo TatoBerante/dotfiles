@@ -4,17 +4,21 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 killall "picom"
 picom -CGb --backend glx &
+/usr/bin/dunst &
+#setxkbmap latam &
+$HOME/.config/bspwm/displays.sh &
 killall "nitrogen"
 nitrogen --set-zoom-fill --random $HOME/Pictures/Backgrounds/ &
 $HOME/.config/polybar/launch.sh &
-xdg-screensaver suspend 0x6b1 &
+xdg-screensaver suspend 0x6c8 &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DisplayPort-0 -d 0
 
 bspc config focused_border_color "#fe8019"
 bspc config border_width          3
-bspc config window_gap            15
-bspc config split_ratio           0.50
+bspc config window_gap            10
+bspc config split_ratio           0.59
 bspc config click_to_focus        true
 bspc config focus_by_distance     true
 bspc config focus_follows_pointer true
@@ -23,6 +27,6 @@ bspc config gapless_monocle       true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
+bspc rule -a galculator manage=off state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off

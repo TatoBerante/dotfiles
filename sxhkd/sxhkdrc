@@ -16,7 +16,8 @@ super + shift + q
 
 # bspwm and sxhkd full reload configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && bspc wm -r
+	bspc wm -r ; sleep 1 ; pkill -USR1 -x sxhkd
+	#	pkill -USR1 -x sxhkd && bspc wm -r
 
 #----------------------------------------------------
 # CUSTOM APPS
@@ -53,6 +54,22 @@ super + c
 # flameshot
 Print
 	flameshot gui
+
+# filezilla
+super + f
+	filezilla
+
+# vscode
+super + c
+	code
+
+# nitrogen
+super + n
+	nitrogen --set-zoom-fill --random $HOME/Pictures/Backgrounds/ &
+
+# galculator
+super + m
+	galculator
 
 #----------------------------------------------------
 # MEDIA

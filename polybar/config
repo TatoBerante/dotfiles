@@ -41,6 +41,7 @@ black = #000
 gray = #666
 white = #ccc
 disable = #404040
+
 ;gruvbox theme palette
 gb-bg = #1d2021
 gb-fg = #fbf1c7
@@ -56,9 +57,27 @@ gb-mustard = #d79921
 gb-bgx = #3c3836
 gb-fgx = #ebdbb2
 gb-bgz = #b0a69b
+
+;nord theme palette
+nrd-bg = #2e3440
+nrd-fg = #eceff4
+nrd-red = #bf616a
+nrd-green = #a3be8c
+nrd-yellow = #ebcb8b
+nrd-blue = #5e81ac
+nrd-midblue = #81a1c1
+nrd-purple = #b48ead
+nrd-aqua = #88c0d0
+nrd-gray = #d8dee9
+nrd-orange = #d08770
+nrd-cyan = #8fbcbb
+nrd-bgx = #4c566a
+nrd-bgz = #3b4252
+nrd-fgx = #e5e9f0
+
 ;customs
 spotify-green = #4fe383
-
+manjaro-green = #008060
 [bar/mybar]
 monitor = ${env:MONITOR:HDMI-A-0}
 ;monitor = ${env:MONITOR:VGA-0}
@@ -81,11 +100,11 @@ border-color = #00000000
 
 ;padding-left = 1
 ;padding-right = 1
-padding = 1
+padding = 0
 
 ;module-margin-left = 1
 ;module-margin-right = 1
-module-margin = 2
+module-margin = 1
 
 ;font-0 = DejaVuSansMono Nerd Font:pixelsize=11;1
 ;font-1 = UbuntuMono Nerd Font Mono:pixelsize=10;1
@@ -98,7 +117,7 @@ font-2 = JetBrainsMonoExtraBold Nerd Font:pixelsize=11;1
 modules-left = workspaces spotify
 ;modules-center = mpd
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = eth memory cpu date volume
+modules-right = eth memory cpu volume date
 
 ;tray-position = right
 ;tray-padding = 2
@@ -342,14 +361,13 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.gb-bgx}
-;format-prefix-background = ${colors.gb-bgx}
-format-prefix-background = ${colors.gb-gray}
-format-underline = ${colors.gb-orange}
-
+format-prefix-background = ${colors.gb-bgx}
+;format-prefix-background = ${colors.gb-gray}
+format-underline = ${colors.nrd-cyan}
 label = "%date% · %time% "
-label-background = ${colors.gb-bgz}
-;label-background = ${colors.gb-gray}
-label-foreground = ${colors.black}
+label-background = ${colors.nrd-bgx}
+;label-background = ${colors.nrd-green}
+label-foreground = ${colors.nrd-gray}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -513,31 +531,28 @@ icon-6 = 7;
 icon-7 = 8;
 icon-8 = 9;
 icon-default = X
-;gb-bg = #1d2021
-;gb-fg = #fbf1c7
-;gb-red = #fb4934
-;gb-green = #b8bb26
-;gb-yellow = #fabd2f
-;gb-blue = #458588
-;gb-purple = #d3869b
-;gb-aqua = #8ec07c
-;gb-gray = #928374
 format = <label-state>
 label-active = %name%
-label-active-foreground = ${colors.background}
-label-active-background = ${colors.gb-mustard}
+label-active-foreground = ${colors.nrd-bg}
+;label-active-background = ${colors.gb-mustard}
+label-active-background = ${colors.nrd-orange}
+label-active-border = ${colors.nrd-fg}
+label-active-underline = ${colors.nrd-red}
 label-active-padding = 1
+;label-active-margin = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${colors.white}
-label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.nrd-gray}
+label-occupied-background = ${colors.nrd-bgx}
 label-occupied-padding = 1
-label-occupied-underline = ${colors.gb-mustard}
+label-occupied-underline = ${colors.nrd-cyan}
+;label-occupied-margin = 1
 
 label-empty = %name%
-label-empty-foreground = ${colors.white}
-label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.nrd-bgx}
+label-empty-background = ${colors.nrd-bg}
 label-empty-padding = 1
+;label-emptys-margin = 1
 
 [module/volume]
 ;     

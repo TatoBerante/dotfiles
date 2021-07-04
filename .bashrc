@@ -123,6 +123,7 @@ fi
 
 source <(kitty + complete setup bash)
 
-neofetch
+#neofetch
+~/Scripts/myfetch.sh
 
 PS1="\e[1;32m\w \$\e[0m "

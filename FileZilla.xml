@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FileZilla3 version="3.52.2" platform="*nix">
+<FileZilla3 version="3.55.1" platform="*nix">
 	<Servers>
 		<Server>
 			<Host>200.110.219.83</Host>
@@ -10,6 +10,7 @@
 			<Pass encoding="base64" />
 			<Logontype>1</Logontype>
 			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>10</MaximumMultipleConnections>
 			<EncodingType>Auto</EncodingType>
 			<BypassProxy>0</BypassProxy>
 			<Name>hm2Data</Name>
@@ -18,17 +19,34 @@
 			<DirectoryComparison>0</DirectoryComparison>
 		</Server>
 		<Server>
-			<Host>snowflakedev.com</Host>
+			<Host>173.231.241.130</Host>
 			<Port>21</Port>
 			<Protocol>0</Protocol>
 			<Type>0</Type>
 			<User>nf85a45</User>
-			<Pass encoding="base64">TnVyZ2xlMjAyMA==</Pass>
+			<Pass encoding="base64">QW1TYWlPczI0TS0yMS50</Pass>
 			<Logontype>1</Logontype>
 			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>10</MaximumMultipleConnections>
 			<EncodingType>Auto</EncodingType>
 			<BypassProxy>0</BypassProxy>
 			<Name>snowflake</Name>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.snowflakedev.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>adminftp@snowflakedev.com</User>
+			<Pass encoding="base64">QW1TYWlPczI0TS0yMS4qZg==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>1</MaximumMultipleConnections>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>snowflake FTP</Name>
 			<SyncBrowsing>0</SyncBrowsing>
 			<DirectoryComparison>0</DirectoryComparison>
 		</Server>
@@ -101,7 +119,6 @@
 		<Setting name="File exists action upload">0</Setting>
 		<Setting name="Allow ascii resume">0</Setting>
 		<Setting name="Greeting resources" />
-		<Setting name="Onetime Dialogs" />
 		<Setting name="Show Tree Local">1</Setting>
 		<Setting name="Show Tree Remote">1</Setting>
 		<Setting name="File Pane Layout">0</Setting>
@@ -118,11 +135,9 @@
 		<Setting name="File associations (v2)" platform="unix" />
 		<Setting name="Comparison mode">1</Setting>
 		<Setting name="Comparison threshold">1</Setting>
-		<Setting name="Site Manager position" />
 		<Setting name="Icon theme">default</Setting>
 		<Setting name="Icon scale">125</Setting>
 		<Setting name="Timestamp in message log">0</Setting>
-		<Setting name="Sitemanager last selected" />
 		<Setting name="Filelist status bar">1</Setting>
 		<Setting name="Filter toggle state">0</Setting>
 		<Setting name="Show quickconnect bar">1</Setting>
@@ -141,7 +156,6 @@
 		<Setting name="Filteredit window size" />
 		<Setting name="Enable invalid char filter">1</Setting>
 		<Setting name="Invalid char replace">_</Setting>
-		<Setting name="Already connected choice">0</Setting>
 		<Setting name="Edit status dialog size" />
 		<Setting name="Display current speed">0</Setting>
 		<Setting name="Toolbar hidden">0</Setting>
@@ -154,36 +168,41 @@
 		<Setting name="Disable update footer">0</Setting>
 		<Setting name="Master password encryptor" />
 		<Setting name="Highest shown overlay id">0</Setting>
-		<Setting name="Greeting version">3.52.2</Setting>
-		<Setting name="Prompt password save">1</Setting>
-		<Setting name="Queue column widths">180 60 180 80 60 150</Setting>
-		<Setting name="Local filelist colwidths">170 80 120 120</Setting>
-		<Setting name="Remote filelist colwidths">150 75 80 100 80 85</Setting>
-		<Setting name="Splitter positions (v2)">97 -130 500000000 235 235 500000000</Setting>
 		<Setting name="Local filelist shown columns">1111</Setting>
 		<Setting name="Remote filelist shown columns">111111</Setting>
 		<Setting name="Local filelist column order">0,1,2,3</Setting>
 		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
 		<Setting name="Local filelist sortorder">0 0</Setting>
+		<Setting name="Onetime Dialogs">001</Setting>
+		<Setting name="Prompt password save">0</Setting>
+		<Setting name="Already connected choice">3</Setting>
+		<Setting name="Queue column widths">623 60 180 80 60 150</Setting>
+		<Setting name="Remote filelist colwidths">398 75 80 161 80 85</Setting>
 		<Setting name="Remote filelist sortorder">0 0</Setting>
-		<Setting name="Window position and size">0 15 34 2524 939 </Setting>
+		<Setting name="Site Manager position">0 714 271 1126 531 </Setting>
+		<Setting name="Sitemanager last selected">0/snowflake</Setting>
+		<Setting name="Greeting version">3.55.1</Setting>
+		<Setting name="Local filelist colwidths">395 80 69 165</Setting>
+		<Setting name="Window position and size">0 15 42 2524 936 </Setting>
+		<Setting name="Splitter positions (v2)">151 -284 500000000 100 100 500000000</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
-					<Host>snowflakedev.com</Host>
+					<Host>173.231.241.130</Host>
 					<Port>21</Port>
 					<Protocol>0</Protocol>
 					<Type>0</Type>
 					<User>nf85a45</User>
-					<Pass encoding="base64">TnVyZ2xlMjAyMA==</Pass>
+					<Pass encoding="base64">QW1TYWlPczI0TS0yMS50</Pass>
 					<Logontype>1</Logontype>
 					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>10</MaximumMultipleConnections>
 					<EncodingType>Auto</EncodingType>
 					<BypassProxy>0</BypassProxy>
 					<Name>snowflake</Name>
 					<Site>0/snowflake</Site>
-					<RemotePath>1 0 11 public_html 3 hm2 13 update-source</RemotePath>
-					<LocalPath>/home/t/Downloads/HM2 FTP/</LocalPath>
+					<RemotePath>1 0 11 public_html 3 hm2 1 c 5 funcs</RemotePath>
+					<LocalPath>/home/tato/public_html/basep/update-source/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>

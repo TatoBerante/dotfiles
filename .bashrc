@@ -124,6 +124,14 @@ fi
 source <(kitty + complete setup bash)
 
 #neofetch
-~/Scripts/myfetch.sh
+~/Scripts/myfetch.sh | lolcat
+
+# lolbanner
+#function lolbanner() {
+#    figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf $@ | lolcat
+#}
 
 PS1="\e[1;32m\w \$\e[0m "
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export PATH="$PATH:$HOME/bin"
+

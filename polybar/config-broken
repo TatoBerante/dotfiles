@@ -1,0 +1,700 @@
+;==========================================================
+;
+; THIS IS AN EXAMPLE CONFIGURATION FILE!
+; IT IS NOT SUPPOSED TO WORK OUT OF THE BOX SINCE IS CONTAINS
+; SETTINGS THAT ARE SPECIFIC TO THE MACHINE WHICH WAS USED
+; TO GENERATE IT.
+; Please refer to the web documentation hosted at:
+; https://github.com/polybar/polybar#configuration
+; and
+; https://github.com/polybar/polybar/wiki/Configuration
+; if you want to automatically generate one for you.
+;
+;==========================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #88000000
+black = #000
+red = #ff3300
+foreground = #ccc
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+black = #000
+gray = #666
+white = #ccc
+disable = #404040
+
+;gruvbox theme palette
+gb-bg = #1d2021
+gb-fg = #fbf1c7
+gb-red = #fb4934
+gb-green = #b8bb26
+gb-yellow = #fabd2f
+gb-blue = #458588
+gb-purple = #d3869b
+gb-aqua = #8ec07c
+gb-gray = #928374
+gb-orange = #fe8019
+gb-mustard = #d79921
+gb-bgx = #3c3836
+gb-fgx = #ebdbb2
+gb-bgz = #b0a69b
+
+;nord theme palette
+nrd-bg = #232831
+nrd-fg = #eceff4
+nrd-red = #bf616a
+nrd-green = #a3be8c
+nrd-yellow = #ebba89
+nrd-blue = #5e81ac
+nrd-midblue = #81a1c1
+nrd-purple = #b48ead
+nrd-aqua = #88c0d0
+nrd-gray = #d8dee9
+nrd-orange = #d08770
+nrd-cyan = #8fbcbb
+nrd-bgx = #4c566a
+nrd-bgz = #2e3442
+nrd-fgx = #e5e9f0
+
+; NEUTRAL THEME
+neutral-background = #88000000
+neutral-black = #000
+
+;customs
+spotify-green = #4fe383
+manjaro-green = #008060
+
+[bar/secondary]
+monitor = ${env:MONITOR:DisplayPort-0}
+width = 100%
+height = 22
+offset-y = 0
+fixed-center = false
+background = ${colors.neutral-background}
+foreground = ${colors.foreground}
+line-size = 0
+line-color = #f00
+border-size = 5
+border-color = ${colors.neutral-background}
+padding = 0
+module-margin = 0
+font-0 = JetBrainsMonoMedium Nerd Font:pixelsize=10;2
+font-1 = JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=10;2
+font-2 = Hurmit Nerd Font Mono:pixelsize=17;1
+font-3 = JetBrainsMonoMedium Nerd Font:pixelsize=12;2
+font-4 = Weather Icons:pixelsize=15;1
+font-5 = JetBrainsMonoMedium Nerd Font:pixelsize=8;2
+modules-left = separator workspaces
+modules-right = volume separator date separator
+wm-restack = bspwm
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/mybar]
+monitor = ${env:MONITOR:HDMI-A-0}
+;monitor = ${env:MONITOR:VGA-0}
+width = 100%
+height = 22
+;offset-x = 2%
+offset-y = 0
+;radius = 5.0
+fixed-center = false
+;background = ${colors.background-alt}
+background = ${colors.neutral-background}
+foreground = ${colors.foreground}
+;line-size = 0
+;line-color = ${neutral-background}
+border-size = 5
+border-color = ${colors.neutral-background}
+;padding-left = 1
+;padding-right = 1
+padding = 0
+
+;module-margin-left = 1
+;module-margin-right = 1
+;module-margin = 1
+
+font-0 = JetBrainsMonoMedium Nerd Font:pixelsize=10;2
+font-1 = JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=10;2
+font-2 = Hurmit Nerd Font Mono:pixelsize=17;1
+font-3 = JetBrainsMonoMedium Nerd Font:pixelsize=12;2
+font-4 = Weather Icons:pixelsize=15;1
+font-5 = JetBrainsMonoMedium Nerd Font:pixelsize=8;2
+
+modules-left = separator workspaces separator updates-arch-combined separator spotify
+;modules-center = 
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = eth separator memory separator cpu separator volume separator date separator
+
+;tray-detached = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-position = right
+;tray-padding = 2
+;tray-maxsize = 20
+;tray-scale = 1.0
+;tray-background = ${colors.nrd-bg}
+
+
+;tray-position = right
+;tray-padding = 2
+;tray-scale = 1.1
+;tray-background = #0063ff
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; But if you rename your bspwm monitors with bspc -n this option will no longer
+; behave correctly.
+; Default: true
+pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+; label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+
+; Separator in between workspaces
+; label-separator = |
+label-separator-padding = 2
+label-separator-foreground = #ffb52a
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+format-padding = 1
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/Scripts/updates_arch.sh
+tail = true
+click-left = pkill -USR1 updates_arch.sh
+format-background = ${colors.neutral-black}
+format-prefix = "  "
+format-prefix-font = 4
+label = "%output% "
+
+;[module/pacman-updates]
+;type = custom/script
+;exec = checkupdates | wc -l
+;interval = 3600
+;label = "%output% "
+;format-prefix = "  "
+;format-prefix-font = 4
+;format-background = ${colors.nrd-bgz}
+
+[module/separator]
+type = custom/text
+content = " "
+content-font = 6
+content-foreground = ${colors.neutral-background}
+content-background = #88000000
+
+[module/sepdarklight]
+; gray to Blue
+;  
+;  
+;  
+type = custom/text
+content = ""
+;content = "%{T3}%{T-} "
+;content = ""
+content-font = 3
+content-foreground = ${colors.nrd-bgz}
+content-background = ${colors.nrd-bg}
+
+[module/seplightsepdark]
+; grey to Blue
+type = custom/text
+content = ""
+;content = "%{T3}%{T-} "
+;content = ""
+content-font = 3
+content-foreground = ${colors.nrd-bgz}
+content-background = ${colors.nrd-bg}
+
+[module/sepbdl]
+type = custom/text
+;content = " "
+;content = "%{T3}%{T-} "
+content = ""
+content-font = 3
+content-foreground = ${colors.nrd-bg}
+content-background = ${colors.nrd-bgz}
+
+[module/sepbld]
+type = custom/text
+;content = " "
+;content = "%{T3}%{T-} "
+content = ""
+content-font = 3
+content-foreground = ${colors.nrd-bgz}
+content-background = ${colors.nrd-bg}
+
+[module/arrow3]
+; grey to Blue
+type = custom/text
+content = " %{T2} %{T-} "
+content-font = 2
+content-foreground = #8b62a9
+content-background = #668bd7
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+;     
+format-prefix-font = 1
+;format-prefix = "  "
+format-prefix = "   "
+format-prefix-foreground = ${colors.nrd-gray}
+format-prefix-background = ${colors.neutral-black}
+format-underline = #f90000
+label = "%percentage:2%% "
+label-foreground = ${colors.nrd-gray}
+label-background = ${colors.neutral-black}
+
+[module/memory]
+type = internal/memory
+interval = 1
+;
+;
+;
+;format-prefix = "  "
+format-prefix = "  "
+format-prefix-font = 1
+format-prefix-foreground = ${colors.nrd-gray}
+format-prefix-background = ${colors.neutral-black}
+label-background = ${colors.neutral-black}
+label-foreground = ${colors.nrd-gray}
+format-underline = ${colors.nrd-yellow}
+label = " %gb_used% (%percentage_used:2%%) "
+
+;
+
+[module/wlan]
+type = internal/network
+; Get yor wlan in terminal:
+; $ ip link show
+; The interface name will be something like wlx30b5c2175da4 or wlan0
+interface = wlx30b5c2175da4
+interval = 1
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+label-disconnected =  
+label-disconnected-foreground = ${colors.gray}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/eth]
+;       
+type = internal/network
+; Get your eth in terminal:
+; $ ip link show
+; The interface name will be something like enp2s0 or eth0
+padding-right = 1
+interface = enp4s0
+interval = 1.0
+accumulate-stats = true
+;  
+  
+format-connected = <label-connected>
+format-connected-font = 1
+format-connected-prefix = "  "
+format-connected-underline = ${colors.nrd-gray}
+;format-connected-background = ${colors.nrd-bg}
+
+format-connected-background = ${colors.neutral-black}
+
+format-connected-foreground = ${colors.nrd-gray}
+format-connected-prefix-foreground = ${colors.nrd-gray}
+;label-connected = %local_ip%  %linkspeed%
+;label-connected = %local_ip%  %downspeed%  %upspeed%
+;label-connected = %downspeed%  %local_ip%
+label-connected = " %downspeed:8% "
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+;       
+type = internal/date
+interval = 1
+
+date = "%a, %d/%m"
+date-alt = "%Y-%m-%d"
+
+time = %H:%M:%S
+time-alt = %H:%M:%S
+time-foreground = ${colors.foreground}
+
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+;format-prefix = ""
+format-prefix = ""
+format-prefix-foreground = ${colors.nrd-gray}
+format-prefix-background = ${colors.neutral-black}
+;format-prefix-background = ${colors.gb-gray}
+format-underline = ${colors.nrd-cyan}
+label = " %date% %time% "
+label-background = ${colors.neutral-black}
+label-foreground = ${colors.nrd-gray}
+margin-left = 0
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+;content-foreground = ${colors.nrd-bgz}
+;content-background = ${colors.nrd-bg}
+;format = <ramp> <label>
+format = <label>
+;label-color: ${colors.nrd-yellow}
+format-underline = #f50a4d
+;format-warn = <ramp> <label-warn>
+format-warn = <label-warn>
+format-warn-underline = ${self.format-underline}
+format-background = ${colors.nrd-bgz}
+format-padding-left = 2
+label = " %temperature-c% "
+label-warn = " "%temperature-c% "
+label-warn-foreground = ${colors.nrd-orange}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu-old]
+;;
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.white}
+;label-open-margin = 1
+label-close = 
+label-close-foreground = ${colors.gb-red}
+;label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+;
+menu-0-0 = " SHUTDOWN "
+menu-0-0-margin = 0
+menu-0-0-padding = 1
+menu-0-0-exec = systemctl poweroff
+menu-0-1 = " REBOOT "
+menu-0-1-margin = 0
+menu-0-1-padding = 1
+menu-0-1-exec = systemctl reboot
+menu-0-2 = " LOGOUT"
+menu-0-2-margin = 0
+menu-0-2-padding = 1
+menu-0-2-exec = ~/.config/polybar/logout.sh
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = cancel
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+format-padding = 1
+label-open = " "
+menu-3-1-underline = #55aa55
+label-open-foreground = ${colors.nrd-purple}
+label-open-background = ${colors.neutral-black}
+label-open-underline = ${colors.secondary}
+label-close =  CANCEL
+label-close-foreground = ${colors.nrd-red}
+label-close-underline = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+menu-0-0 = POWER OFF
+menu-0-0-exec = menu-open-1
+menu-0-1 = REBOOT
+menu-0-1-exec = menu-open-2
+menu-0-2 = SUSPEND
+menu-0-2-exec = menu-open-3
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = poweroff
+menu-1-1-exec = poweroff
+menu-2-0 = cancel
+menu-2-0-exec = menu-open-0
+menu-2-1 = reboot
+menu-2-1-exec = reboot
+menu-3-0 = SUSPEND
+menu-3-0-exec = systemctl suspend
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = true
+;format-padding separates from other modules
+format-padding = 0
+icon-0 = 1; 1 
+icon-1 = 2; 2 
+icon-2 = 3; 3 
+icon-3 = 4; 4 
+icon-4 = 5; 5 
+icon-5 = 6; 6 
+icon-6 = 7; 7 
+icon-7 = 8; 8 
+icon-8 = 9; 9 
+icon-9 = 0; 0 
+icon-default = 
+format = "<label-state>"
+label-active = %name%
+label-active-foreground = ${colors.nrd-orange}
+label-active-background = ${colors.neutral-black}
+label-active-border = ${colors.nrd-fg}
+label-active-underline = ${colors.nrd-red}
+label-active-padding = 1
+label-active-font = 1
+
+label-occupied = %name%
+label-occupied-foreground = ${colors.nrd-gray}
+label-occupied-background = ${colors.neutral-black}
+label-occupied-padding = 1
+label-occupied-underline = ${colors.nrd-cyan}
+label-occupied-font = 1
+;label-occupied-margin = 1
+
+label-empty = %name%
+label-empty-foreground = ${colors.nrd-bgx}
+label-empty-background = ${colors.neutral-black}
+label-empty-padding = 1
+label-empty-font = 1
+;label-empty-margin = 1
+
+[module/volume]
+type = internal/alsa
+
+; Default: Master
+master-mixer = Master
+
+format-volume = <label-volume>
+format-volume-background = ${colors.neutral-black}
+format-volume-padding = 0
+format-volume-underline = ${colors.nrd-purple}
+
+label-volume = "  %percentage:3%% "
+label-volume-foreground = ${colors.nrd-gray}
+
+ramp-volume-0-font = 1
+ramp-volume-0 = " "
+ramp-volume-0-foreground = ${colors.nrd-gray}
+ramp-volume-1-font = 1
+ramp-volume-1 = " "
+ramp-volume-1-foreground = ${colors.nrd-gray}
+ramp-volume-2-font = 1
+ramp-volume-2 = " "
+ramp-volume-2-foreground = ${colors.nrd-gray}
+ramp-volume-3-font = 1
+ramp-volume-3 = " "
+ramp-volume-3-foreground = ${colors.nrd-gray}
+
+label-muted-font = 1
+label-muted = "  %percentage:3%% "
+label-muted-foreground = ${colors.nrd-orange}
+label-muted-background = ${colors.nrd-bgz}
+label-muted-underline = ${colors.nrd-gray}
+
+;ramp-volume-1 =  🔇
+;ramp-volume-1-foreground = ${colors.gb-blue}
+;ramp-volume-2 = 
+;ramp-volume-2-foreground = ${colors.gb-red}
+;ramp-volume-3 = 
+;ramp-volume-3-foreground = ${colors.gb-blue}
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix-padding = 1
+;format-prefix-padding-right = 1
+format-prefix = " "
+format-prefix-font = 4
+format-prefix-foreground = ${colors.spotify-green}
+format = <label>  
+exec = python3 ~/.config/polybar/spotify_status.py -f '{artist} - {song} ({album}) ' -t 100
+format-underline = ${colors.nrd-green}
+format-foreground = ${colors.spotify-green}
+format-background = ${colors.neutral-black}
+
+[settings]
+;screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

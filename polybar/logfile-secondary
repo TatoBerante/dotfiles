@@ -1,0 +1,15 @@
+polybar|warn:  Naming your configuration file 'config' is deprecated, the expected name is 'config.ini'.
+polybar|notice:  Parsing config file: /home/tato/.config/polybar/config
+polybar|notice:  Loading module 'separator-ol' of type 'custom/text'
+polybar|notice:  Loading module 'workspaces' of type 'internal/xworkspaces'
+polybar|notice:  Loading module 'separator-or' of type 'custom/text'
+polybar|notice:  Loading module 'separator-ol' of type 'custom/text'
+polybar|notice:  Loading module 'volume' of type 'internal/alsa'
+polybar|notice:  Loading module 'separator-bo' of type 'custom/text'
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|notice:  Loading module 'separator-or' of type 'custom/text'
+polybar|notice:  Loaded 8 modules
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=10" (name=JetBrainsMonoMedium Nerd Font, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=10" (name=JetBrainsMonoExtraBold Nerd Font Mono, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=15" (name=JetBrainsMonoExtraBold Nerd Font Mono, offset=4, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "Noto Sans:pixelsize=20" (name=Noto Sans, offset=2, file=/usr/share/fonts/noto/NotoSans-Regular.ttf)

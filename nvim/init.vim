@@ -50,8 +50,7 @@ set completeopt=menuone,longest
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/gruvbox-community/gruvbox.git'
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'https://github.com/kovetskiy/sxhkd-vim'
 Plug 'https://github.com/yuezk/vim-js'
 Plug 'https://github.com/maxmellon/vim-jsx-pretty'
@@ -62,7 +61,8 @@ Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
 " colorscheme gruvbox
-colorscheme nord
+" colorscheme nord
+colorscheme base16-default-dark
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE

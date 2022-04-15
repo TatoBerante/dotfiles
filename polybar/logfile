@@ -1,9 +1,16 @@
 polybar|notice:  Parsing config file: /home/tato/.config/polybar/config
-polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=11" (name=JetBrainsMonoMedium Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
-polybar|notice:  Loaded font "JetBrainsMono Nerd Font Mono:pixelsize=11" (name=JetBrainsMono Nerd Font Mono, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
-polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font:pixelsize=11" (name=JetBrainsMonoExtraBold Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete.ttf)
+polybar|error: Disabling module "openweathermap-fullfeatured" (reason: Missing section "module/openweathermap-fullfeatured")
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=10" (name=JetBrainsMonoMedium Nerd Font, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=10" (name=JetBrainsMonoExtraBold Nerd Font Mono, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "Hurmit Nerd Font Mono:pixelsize=17" (name=Hurmit Nerd Font Mono, offset=1, file=/home/tato/.local/share/fonts/Hurmit-Nerd-Font-Mono.otf)
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=12" (name=JetBrainsMonoMedium Nerd Font, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "Weather Icons:pixelsize=15" (name=Weather Icons, offset=1, file=/usr/share/fonts/TTF/weathericons-regular-webfont.ttf)
 polybar|notice:  Termination signal received, shutting down...
 polybar|notice:  Parsing config file: /home/tato/.config/polybar/config
-polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=11" (name=JetBrainsMonoMedium Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
-polybar|notice:  Loaded font "JetBrainsMono Nerd Font Mono:pixelsize=11" (name=JetBrainsMono Nerd Font Mono, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
-polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font:pixelsize=11" (name=JetBrainsMonoExtraBold Nerd Font, offset=1, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete.ttf)
+polybar|error: Disabling module "openweathermap-fullfeatured" (reason: Missing section "module/openweathermap-fullfeatured")
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=10" (name=JetBrainsMonoMedium Nerd Font, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMonoExtraBold Nerd Font Mono:pixelsize=10" (name=JetBrainsMonoExtraBold Nerd Font Mono, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono ExtraBold ExtBd Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "Hurmit Nerd Font Mono:pixelsize=17" (name=Hurmit Nerd Font Mono, offset=1, file=/home/tato/.local/share/fonts/Hurmit-Nerd-Font-Mono.otf)
+polybar|notice:  Loaded font "JetBrainsMonoMedium Nerd Font:pixelsize=12" (name=JetBrainsMonoMedium Nerd Font, offset=2, file=/home/tato/.fonts/JetBrainsMono/JetBrains Mono Medium Medium Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "Weather Icons:pixelsize=15" (name=Weather Icons, offset=1, file=/usr/share/fonts/TTF/weathericons-regular-webfont.ttf)
+polybar|notice:  Termination signal received, shutting down...

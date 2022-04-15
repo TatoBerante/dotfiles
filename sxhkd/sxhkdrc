@@ -19,21 +19,29 @@ super + Escape
 	bspc wm -r ; sleep 1 ; pkill -USR1 -x sxhkd
 	#	pkill -USR1 -x sxhkd && bspc wm -r
 
+# power management
+super + Delete
+	systemctl poweroff
+
+super + shift + Delete
+	systemctl reboot
+
 #----------------------------------------------------
 # CUSTOM APPS
 #----------------------------------------------------
 
 # terminal emulator
-super + t
-	kitty
+super + Return
+	alacritty
 
 # program launcher
-super + r
-	dmenu_run
+super + space
+    rofi -combi-modi window,drun,ssh -font "JetBrainsMono Nerd Font 10" -show drun
+#   dmenu_run
 
 # files explorer
 super + e
-    pcmanfm
+	pcmanfm
 
 # firefox
 super + w
@@ -43,13 +51,21 @@ super + w
 super + b
     brave
 
-# geany
+# text-editor
 super + g
     geany
 
+# mame
+super + m
+	mame
+
+# spotify
+super + s
+	spotify
+
 # code
 super + c
-    code
+    /snap/bin/code
 
 # flameshot
 Print
@@ -68,8 +84,16 @@ super + n
 	nitrogen --set-zoom-fill --random $HOME/Pictures/Backgrounds/ &
 
 # galculator
-super + m
+super + alt + 0
 	galculator
+
+# chromium
+super + h
+	chromium
+
+# dunst history
+#super + h
+#    dunstctl history-pop
 
 #----------------------------------------------------
 # MEDIA
@@ -85,10 +109,10 @@ XF86AudioMicMute
 
 # Change volume
 XF86AudioRaiseVolume
-    amixer set Master 5%+
+    amixer set Master 1%+
 
 XF86AudioLowerVolume
-    amixer set Master 5%-
+    amixer set Master 1%-
 
 XF86AudioPlay 
     playerctl play-pause
@@ -112,8 +136,15 @@ super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
-super + g
+super + a
 	bspc node -s biggest.window
+    
+#----------------------------------------------------
+# BSP-LAYOUT
+#----------------------------------------------------
+
+super + F12
+    bsp-layout cycle --layouts tall,monocle,even
 
 #----------------------------------------------------
 # STATE/FLAGS
@@ -124,7 +155,7 @@ super + g
 #	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # toggle fullscreen
-super + f
+super + control + f
     bspc node focused.fullscreen -t tiled || bspc node focused.tiled -t fullscreen
 
 # set the node flags
@@ -152,7 +183,7 @@ super + Tab
     bspc node -f next.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super + shift{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -178,7 +209,7 @@ super + control + {0-9}
 #----------------------------------------------------
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -198,11 +229,11 @@ super + ctrl + shift + space
 #----------------------------------------------------
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+super + alt + {Left,Down,Top,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+super + alt + shift + {Left,Down,Top,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window

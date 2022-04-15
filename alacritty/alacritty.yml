@@ -38,6 +38,8 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
+  opacity: 0.85
+
   # Window decorations
   #
   # Values for `decorations`:
@@ -120,13 +122,42 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.90
+# background_opacity: 0.85
 
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x000000'
+#    foreground: '0xeaeaea'
+
+# Colors (Tomorrow Night Bright)
 colors:
   # Default colors
   primary:
-    background: '0x15181e'
-    foreground: '0xbbc2cf'
+    background: '0x000000'
+    foreground: '0xeaeaea'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xd54e53'
+    green:   '0xb9ca4a'
+    yellow:  '0xe6c547'
+    blue:    '0x7aa6da'
+    magenta: '0xc397d8'
+    cyan:    '0x70c0ba'
+    white:   '0x424242'
+
+  # Bright colors
+  bright:
+    black:   '0x969896'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
+    white:   '0x2a2a2a'
 
 # Mouse bindings
 #

@@ -36,7 +36,7 @@ super + Return
 
 # program launcher
 super + space
-    rofi -combi-modi window,drun,ssh -font "JetBrainsMono Nerd Font 10" -show drun
+    rofi -combi-modi window,drun,ssh -show-icons -font "JetBrainsMono Nerd Font 10" -show drun
 #   dmenu_run
 
 # files explorer

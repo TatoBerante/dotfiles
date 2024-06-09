@@ -19,12 +19,9 @@ super + Escape
 	bspc wm -r ; sleep 1 ; pkill -USR1 -x sxhkd
 	#	pkill -USR1 -x sxhkd && bspc wm -r
 
-# power management
+# power menu
 super + Delete
-	systemctl poweroff
-
-super + shift + Delete
-	systemctl reboot
+    ~/bin/powerrofi.sh
 
 #----------------------------------------------------
 # CUSTOM APPS
@@ -36,16 +33,17 @@ super + Return
 
 # program launcher
 super + space
-    rofi -combi-modi window,drun,ssh -show-icons -font "JetBrainsMono Nerd Font 10" -show drun
-#   dmenu_run
+    rofi -show-icons -show drun
+#rofi -show-icons -combi-modi drun,ssh -show combi -modi combi -matching fuzzy
+
+#calc
+super + shift + 0
+    rofi -show calc -no-show-match -no-sort
 
 # files explorer
 super + e
-	pcmanfm
-
-# firefox
-super + w
-    firefox
+    thunar
+# pcmanfm
 
 # brave
 super + b
@@ -65,7 +63,7 @@ super + s
 
 # code
 super + c
-    /snap/bin/code
+    code
 
 # flameshot
 Print
@@ -81,15 +79,20 @@ super + c
 
 # nitrogen
 super + n
-	nitrogen --set-zoom-fill --random $HOME/Pictures/Backgrounds/ &
+    feh --recursive --bg-fill --no-xinerama --randomize $HOME/BigBoi/Pictures/Backgrounds/curated-catppuccin/webps/*
+#nitrogen --set-zoom-fill --random $HOME/Area51/NoSpaceArch/Pictures/Backgrounds/ &
 
 # galculator
 super + alt + 0
 	galculator
 
-# chromium
-super + h
-	chromium
+# Main web browser
+super + x
+	firefox
+
+# Chrome
+super + w
+    google-chrome-stable
 
 # dunst history
 #super + h
@@ -196,13 +199,13 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# focus to the given desktop
+super + {0-9}
+	bspc desktop -f {0-9}
 
 # send and focus to the given desktop
 super + control + {0-9}
-	bspc node -d  {0-9} && bspc desktop -f {0-9}
+	bspc node -d {0-9} && bspc desktop -f {0-9}
 
 #----------------------------------------------------
 # PRESELECT

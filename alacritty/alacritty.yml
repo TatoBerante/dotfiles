@@ -38,7 +38,7 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
-  opacity: 0.85
+  opacity: 0.80
 
   # Window decorations
   #
@@ -130,34 +130,6 @@ font:
 #    background: '0x000000'
 #    foreground: '0xeaeaea'
 
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
-  primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
-
-  # Normal colors
-  normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0x424242'
-
-  # Bright colors
-  bright:
-    black:   '0x969896'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
-    white:   '0x2a2a2a'
 
 # Mouse bindings
 #
@@ -299,3 +271,9 @@ key_bindings:
   - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
   - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
